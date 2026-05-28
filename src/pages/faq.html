@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FAQ — Мандрівник</title>
+        <link rel="stylesheet" href="/scss/main.scss" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Magra:wght@700&family=Red+Hat+Text:wght@400;500&display=swap"
+        />
+        <script
+            defer
+            src="https://kit.fontawesome.com/deba429617.js"
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="/js/pages/faq.js"></script>
+    </head>
+    <body>
+        {{> header}}
+
+        <main>
+            <!--  FAQ HERO  -->
+            <section class="faq-hero">
+                <div class="wrapper">
+                    <p class="faq-hero__eyebrow">Допомога та підтримка</p>
+                    <h1 class="faq-hero__title">Часті запитання</h1>
+                    <p class="faq-hero__sub">
+                        Відповіді на найпоширеніші запитання про подорожі з
+                        Мандрівником
+                    </p>
+                </div>
+            </section>
+
+            <!--  FAQ ACCORDION  -->
+            <section class="faq-section">
+                <div class="wrapper">
+                    <h2 class="faq-section__title">Все, що вас цікавить</h2>
+                    <p class="faq-section__sub">
+                        Не знайшли відповіді? Напишіть нам — ми завжди раді
+                        допомогти.
+                    </p>
+
+                    <ul class="faq-list">
+                        <li class="faq-item">
+                            <button
+                                class="faq-item__question"
+                                aria-expanded="false"
+                            >
+                                Як замовити тур через Мандрівник?
+                                <span class="faq-item__icon">+</span>
+                            </button>
+                            <div class="faq-item__answer">
+                                Зареєструйтеся або увійдіть у свій акаунт,
+                                введіть бажаний напрямок і дати у формі пошуку
+                                на головній сторінці, оберіть відповідний пакет
+                                із запропонованих варіантів і підтвердіть
+                                замовлення. Менеджер зв'яжеться з вами протягом
+                                однієї робочої години для уточнення деталей.
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button
+                                class="faq-item__question"
+                                aria-expanded="false"
+                            >
+                                Чи можна скасувати або змінити бронювання?
+                                <span class="faq-item__icon">+</span>
+                            </button>
+                            <div class="faq-item__answer">
+                                Так. Безкоштовне скасування доступне за 14 днів
+                                до дати відправлення. При скасуванні від 7 до 13
+                                днів стягується комісія 20 %. За менш ніж 7 днів
+                                повернення коштів не передбачено.
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button
+                                class="faq-item__question"
+                                aria-expanded="false"
+                            >
+                                Які методи оплати доступні?
+                                <span class="faq-item__icon">+</span>
+                            </button>
+                            <div class="faq-item__answer">
+                                Ми приймаємо банківські картки Visa, Mastercard
+                                та American Express, а також оплату через Apple
+                                Pay, Google Pay і банківський переказ. Для
+                                деяких пакетів доступна розстрочка на 3 або 6
+                                місяців без переплати.
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button
+                                class="faq-item__question"
+                                aria-expanded="false"
+                            >
+                                Як отримати персональні рекомендації?
+                                <span class="faq-item__icon">+</span>
+                            </button>
+                            <div class="faq-item__answer">
+                                Після реєстрації заповніть коротке опитування у
+                                профілі — вкажіть улюблений тип відпочинку,
+                                бюджет та бажану тривалість поїздки. Система
+                                автоматично підбере найкращі пропозиції.
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button
+                                class="faq-item__question"
+                                aria-expanded="false"
+                            >
+                                Чи потрібна реєстрація для перегляду турів?
+                                <span class="faq-item__icon">+</span>
+                            </button>
+                            <div class="faq-item__answer">
+                                Переглядати каталог і порівнювати пакети можна
+                                без реєстрації. Однак для бронювання, збереження
+                                обраних турів і отримання персональних
+                                рекомендацій потрібен акаунт. Реєстрація займає
+                                менше хвилини.
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button
+                                class="faq-item__question"
+                                aria-expanded="false"
+                            >
+                                Чи входять страховка та візові послуги у
+                                вартість туру?
+                                <span class="faq-item__icon">+</span>
+                            </button>
+                            <div class="faq-item__answer">
+                                Туристична страховка та допомога з оформленням
+                                візи включені у пакети категорії «Преміум». Для
+                                стандартних пакетів їх можна додати окремо під
+                                час оформлення замовлення.
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button
+                                class="faq-item__question"
+                                aria-expanded="false"
+                            >
+                                Як зв'язатися з підтримкою?
+                                <span class="faq-item__icon">+</span>
+                            </button>
+                            <div class="faq-item__answer">
+                                Наша служба підтримки доступна цілодобово. Ви
+                                можете написати нам у чаті на сайті, надіслати
+                                листа на support@mandrivnyk.ua або
+                                зателефонувати на гарячу лінію 0 800 100 200.
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button
+                                class="faq-item__question"
+                                aria-expanded="false"
+                            >
+                                Чи є програма лояльності або знижки для
+                                постійних клієнтів?
+                                <span class="faq-item__icon">+</span>
+                            </button>
+                            <div class="faq-item__answer">
+                                Так! Програма «Мандрівник+» нараховує бали за
+                                кожне бронювання. Накопичені бали можна
+                                використовувати як знижку на наступні подорожі.
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="faq-contact">
+                        <h3 class="faq-contact__title">
+                            Не знайшли відповіді?
+                        </h3>
+                        <p class="faq-contact__text">
+                            Наша команда завжди готова допомогти вам спланувати
+                            ідеальну подорож.<br />
+                            Напишіть нам — відповімо протягом години.
+                        </p>
+                        <button class="btn faq-contact__btn js-open-login">
+                            Зв'язатися з нами
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        {{> footer}} {{> modals}}
+    </body>
+</html>

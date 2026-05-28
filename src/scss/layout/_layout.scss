@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+// Wrapper
+.wrapper {
+    max-width: $wrapper-w;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+// Button
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $clr-white;
+    font-family: $ff-body;
+    font-weight: 500;
+    background: $clr-secondary;
+    padding: 1rem 2rem;
+    border-radius: $radius-md;
+    transition:
+        background $ease,
+        transform 0.1s ease;
+
+    &:hover {
+        background: $clr-secondary-dk;
+    }
+    &:active {
+        transform: scale(0.97);
+    }
+}

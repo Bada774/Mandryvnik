@@ -1,0 +1,45 @@
+@use "../abstracts" as *;
+
+:root {
+    --clr-primary: #{$clr-primary};
+    --clr-primary-dark: #{$clr-primary-dark};
+    --clr-secondary: #{$clr-secondary};
+    --clr-secondary-dk: #{$clr-secondary-dk};
+    --clr-secondary-40: #{$clr-secondary-40};
+    --clr-secondary-80: #{$clr-secondary-80};
+    --clr-white: #{$clr-white};
+    --clr-overlay: #{$clr-overlay};
+    --nav-h: #{$nav-h};
+    --wrapper-w: #{$wrapper-w};
+    --radius-sm: #{$radius-sm};
+    --radius-md: #{$radius-md};
+    --radius-lg: #{$radius-lg};
+    --ease: #{$ease};
+}
+
+// Base
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $ff-body;
+    overflow-x: hidden;
+    color: $clr-secondary;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}

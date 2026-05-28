@@ -1,0 +1,9 @@
+//  MAIN STYLESHEET ENTRY POINT
+//  Import order matters — abstracts first, then base, layout,
+//  components, and finally page-specific overrides.
+
+@use "abstracts" as *; // Variables, mixins (no output)
+@use "base"; // Reset + global base styles
+@use "layout"; // Wrapper, btn utilities
+@use "components"; // Nav, footer, modals, slider, stories
+@use "pages"; // Hero, steps, faq

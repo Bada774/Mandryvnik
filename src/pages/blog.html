@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Блог — Мандрівник</title>
+        <link rel="stylesheet" href="/scss/main.scss" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Magra:wght@700&family=Red+Hat+Text:wght@400;500&display=swap"
+        />
+        <script
+            defer
+            src="https://kit.fontawesome.com/deba429617.js"
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="/js/pages/blog.js"></script>
+    </head>
+    <body>
+        {{> header}}
+
+        <main>
+            <!--  HERO  -->
+            <section class="blog-hero">
+                <div class="wrapper">
+                    <p class="blog-hero__eyebrow">Натхнення для подорожей</p>
+                    <h1 class="blog-hero__title">Блог Мандрівника</h1>
+                    <p class="blog-hero__sub">
+                        Історії, поради та відкриття від наших мандрівників з
+                        усього світу
+                    </p>
+                </div>
+            </section>
+
+            <!--  FEATURED ARTICLE  -->
+            <section class="blog-featured">
+                <div class="wrapper">
+                    <article class="blog-featured__card">
+                        <a class="blog-featured__img-wrap" href="#">
+                            <img
+                                class="blog-featured__img"
+                                src="/assets/img/story1.png"
+                                alt="10 фото Тайланду"
+                            />
+                            <span class="blog-featured__tag">Підбірка</span>
+                        </a>
+                        <div class="blog-featured__body">
+                            <div class="blog-featured__meta">
+                                <span
+                                    ><i class="fa-regular fa-calendar"></i> 15
+                                    травня 2025</span
+                                >
+                                <span
+                                    ><i class="fa-regular fa-clock"></i> 8 хв
+                                    читання</span
+                                >
+                                <span
+                                    ><i class="fa-regular fa-user"></i> Олена
+                                    Коваль</span
+                                >
+                            </div>
+                            <h2 class="blog-featured__title">
+                                10 фото Тайланду, які змусять вас купити квиток
+                                вже сьогодні
+                            </h2>
+                            <p class="blog-featured__excerpt">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Repudiandae necessitatibus
+                                cupiditate recusandae magnam. Sed facilis iure
+                                magnam minus soluta exercitationem eligendi
+                                itaque officiis, harum eum reiciendis ducimus
+                                voluptate blanditiis accusantium iste totam.
+                                Aliquid placeat expedita reiciendis maxime modi
+                                est obcaecati.
+                            </p>
+                            <a class="blog-featured__link btn" href="#">
+                                Читати статтю
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!--  FILTERS  -->
+            <section class="blog-filters">
+                <div class="wrapper">
+                    <div class="blog-filters__inner">
+                        <button
+                            class="blog-filters__btn active"
+                            data-filter="all"
+                        >
+                            Всі
+                        </button>
+                        <button class="blog-filters__btn" data-filter="guides">
+                            Гайди
+                        </button>
+                        <button class="blog-filters__btn" data-filter="stories">
+                            Історії
+                        </button>
+                        <button class="blog-filters__btn" data-filter="tips">
+                            Поради
+                        </button>
+                        <button class="blog-filters__btn" data-filter="lists">
+                            Підбірки
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--  ARTICLES GRID  -->
+            <section class="blog-grid-section">
+                <div class="wrapper">
+                    <div class="blog-grid" id="blogGrid">
+                        {{> blog-card img="/assets/img/story2.png" tag="Гайд" category="guides"
+                            date="10 травня 2025" read="6"
+                            title="Як підготуватись до подорожі в Японію: повний гайд"
+                            excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque provident at totam, architecto non sed iusto dolorum quod laborum odio." }}
+                        {{> blog-card img="/assets/img/story3.png" tag="Історія" category="stories"
+                            date="2 травня 2025" read="5"
+                            title="Моє серце залишилось у горах Карпат"
+                            excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eligendi dolorem? Provident incidunt error ipsum odio eveniet deserunt tenetur." }}
+                        {{> blog-card img="/assets/img/story4.png" tag="Поради" category="tips"
+                            date="24 квітня 2025" read="4"
+                            title="10 речей, які варто знати перед першою подорожжю solo"
+                            excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae illo consequuntur voluptates ipsum laborum quaerat assumenda odit cupiditate." }}
+                        {{> blog-card img="/assets/img/story1.png" tag="Підбірка" category="lists"
+                            date="18 квітня 2025" read="7"
+                            title="Найдовша подорож у моєму житті: 3 місяці у Південній Америці"
+                            excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae necessitatibus cupiditate recusandae magnam sed facilis iure minus soluta." }}
+                        {{> blog-card img="/assets/img/story2.png" tag="Гайд" category="guides"
+                            date="10 квітня 2025" read="9"
+                            title="Національний парк Юта: маршрути, поради, що взяти"
+                            excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas blanditiis iste totam aliquid placeat expedita reiciendis maxime modi est." }}
+                        {{> blog-card img="/assets/img/story3.png" tag="Поради" category="tips"
+                            date="3 квітня 2025" read="3"
+                            title="Бюджетна подорож по Іспанії: реально чи ні?"
+                            excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto non sed iusto dolorum quod laborum odio reiciendis ducimus voluptate." }}
+                    </div>
+
+                    <!-- ── Pagination ── -->
+                    <nav class="blog-pagination" aria-label="Пагінація">
+                        <button
+                            class="blog-pagination__btn blog-pagination__btn--prev"
+                            aria-label="Попередня сторінка"
+                            disabled
+                        >
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="blog-pagination__page active">1</button>
+                        <button class="blog-pagination__page">2</button>
+                        <button class="blog-pagination__page">3</button>
+                        <button
+                            class="blog-pagination__btn blog-pagination__btn--next"
+                            aria-label="Наступна сторінка"
+                        >
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </nav>
+                </div>
+            </section>
+
+            <!--  NEWSLETTER  -->
+            <section class="blog-newsletter">
+                <div class="wrapper">
+                    <div class="blog-newsletter__inner">
+                        <div class="blog-newsletter__text">
+                            <h2 class="blog-newsletter__title">
+                                Не пропускайте нові статті
+                            </h2>
+                            <p class="blog-newsletter__sub">
+                                Підпишіться та отримуйте найцікавіші матеріали
+                                прямо на пошту
+                            </p>
+                        </div>
+                        <form class="blog-newsletter__form" novalidate>
+                            <input
+                                class="blog-newsletter__input"
+                                type="email"
+                                placeholder="Ваш e-mail"
+                                aria-label="E-mail для підписки"
+                            />
+                            <button
+                                class="btn blog-newsletter__btn"
+                                type="button"
+                            >
+                                Підписатись
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        {{> footer}} {{> modals}}
+    </body>
+</html>

@@ -1,0 +1,180 @@
+@use "../abstracts" as *;
+
+.section-destinations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10rem;
+
+    &__title {
+        color: $clr-primary;
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        text-align: center;
+        font-family: $ff-body;
+    }
+
+    // Slider container
+    &__slider {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    // Slide
+    &__slide {
+        position: relative;
+        border-radius: $radius-lg;
+        overflow: hidden;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: $radius-lg;
+        transition: transform 0.45s ease;
+    }
+
+    &__slide:hover &__img {
+        transform: scale(1.04);
+    }
+
+    &__text {
+        font-family: $ff-body;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 1.75rem;
+        color: $clr-white;
+        position: absolute;
+        left: 1rem;
+        bottom: 1.25rem;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+        pointer-events: none;
+    }
+
+    // "Find more" button
+    &__btn {
+        font-size: 1.4rem;
+        font-family: $ff-body;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.625rem 2rem;
+
+        span {
+            font-size: 2rem;
+        }
+    }
+
+    // Responsive
+    @include respond-to(tablet) {
+        &__title {
+            font-size: 2rem;
+        }
+    }
+
+    @include respond-to(mobile) {
+        margin-bottom: 7rem;
+
+        &__title {
+            font-size: 1.6rem;
+        }
+        &__text {
+            font-size: 1.25rem;
+        }
+    }
+
+    @include respond-to(small) {
+        &__title {
+            font-size: 1.35rem;
+        }
+        &__text {
+            font-size: 1rem;
+        }
+    }
+}
+
+// Slider nav row (buttons + pagination)
+.section-destinations__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.swiper-pagination {
+    position: static !important;
+    width: auto !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: $clr-primary;
+    opacity: 0.35;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    margin: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+.swiper-btn-prev,
+.swiper-btn-next {
+    position: static;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: $clr-secondary;
+    color: $clr-white;
+    font-size: 1.1rem;
+    @include flex-center;
+    box-shadow: 0 4px 16px rgba(13, 96, 111, 0.35);
+    transition:
+        background $ease,
+        box-shadow $ease,
+        transform 0.15s ease;
+
+    &:hover {
+        background: $clr-secondary-dk;
+        box-shadow: 0 6px 24px rgba(13, 96, 111, 0.45);
+    }
+
+    &:active {
+        transform: scale(0.93);
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+@include respond-to(mobile) {
+    .swiper-btn-prev,
+    .swiper-btn-next {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}

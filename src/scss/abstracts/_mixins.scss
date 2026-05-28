@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+@mixin respond-to($bp) {
+    @if $bp == tablet {
+        @media (max-width: $bp-tablet) {
+            @content;
+        }
+    } @else if $bp == mobile {
+        @media (max-width: $bp-mobile) {
+            @content;
+        }
+    } @else if $bp == small {
+        @media (max-width: $bp-small) {
+            @content;
+        }
+    } @else {
+        @media (max-width: $bp) {
+            @content;
+        }
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin absolute-fill {
+    position: absolute;
+    inset: 0;
+}

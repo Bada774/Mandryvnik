@@ -1,0 +1,123 @@
+@use "../abstracts" as *;
+
+.section-main {
+    background: url("@/assets/img/river.png") center / cover no-repeat;
+    min-height: 765px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: calc(#{$nav-h} + 4rem);
+    padding-bottom: 4rem;
+
+    &__title {
+        font-family: $ff-display;
+        font-size: 5rem;
+        font-weight: 700;
+        color: $clr-white;
+        margin-bottom: 2.375rem;
+        line-height: 1.1;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &__info {
+        font-family: $ff-display;
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-style: italic;
+        color: $clr-white;
+        margin-bottom: 2.875rem;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    &__form {
+        position: relative;
+        width: 100%;
+        max-width: 860px;
+    }
+
+    &__input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.75);
+        border: none;
+        outline: none;
+        padding: 1.75rem 210px 1.75rem 2rem;
+        border-radius: 16px;
+        font-size: 1.4rem;
+        transition: background $ease;
+        font-family: $ff-display;
+
+        &:focus {
+            background: rgba(255, 255, 255, 0.92);
+        }
+
+        &::placeholder {
+            color: $clr-primary;
+            font-family: $ff-display;
+            font-size: 1.4rem;
+            font-style: italic;
+        }
+    }
+
+    &__button {
+        font-size: 1.1rem;
+        font-family: $ff-body;
+        position: absolute;
+        top: 50%;
+        right: 0.75rem;
+        transform: translateY(-50%);
+        padding: 0.875rem 1.5rem;
+        transition: background $ease;
+
+        &:active {
+            transform: translateY(-50%);
+        }
+    }
+
+    // Responsive
+    @include respond-to(tablet) {
+        &__title {
+            font-size: 4rem;
+        }
+    }
+
+    @include respond-to(mobile) {
+        min-height: 600px;
+
+        &__title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &__info {
+            font-size: 1rem;
+        }
+
+        &__input {
+            padding: 1.25rem 1.5rem 1.5rem;
+            font-size: 1.1rem;
+
+            &::placeholder {
+                font-size: 1rem;
+            }
+        }
+
+        &__button {
+            top: auto;
+            bottom: 0.75rem;
+            right: 0.75rem;
+            transform: none;
+            font-size: 0.95rem;
+            padding: 0.75rem 1.25rem;
+
+            &:active {
+                transform: none;
+            }
+        }
+    }
+
+    @include respond-to(small) {
+        &__title {
+            font-size: 2rem;
+        }
+    }
+}

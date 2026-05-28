@@ -1,0 +1,235 @@
+@use "../abstracts" as *;
+
+// Hero banner
+.faq-hero {
+    background: url("@/assets/img/river.png") center / cover no-repeat;
+    min-height: 320px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+    padding-top: calc(#{$nav-h} + 2rem);
+    position: relative;
+
+    &::after {
+        content: "";
+        @include absolute-fill;
+        background: linear-gradient(
+            to top,
+            rgba(13, 96, 111, 0.45),
+            transparent 60%
+        );
+    }
+
+    .wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__eyebrow {
+        font-family: $ff-body;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 0.5rem;
+    }
+
+    &__title {
+        font-family: $ff-display;
+        font-size: 4rem;
+        font-weight: 700;
+        color: $clr-white;
+        line-height: 1.1;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &__sub {
+        font-family: $ff-display;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-top: 0.75rem;
+    }
+
+    @include respond-to(tablet) {
+        &__title {
+            font-size: 3rem;
+        }
+    }
+    @include respond-to(mobile) {
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__sub {
+            font-size: 1rem;
+        }
+    }
+    @include respond-to(small) {
+        &__title {
+            font-size: 2rem;
+        }
+    }
+}
+
+// FAQ main content
+.faq-section {
+    padding: 5rem 0 6rem;
+
+    &__title {
+        color: $clr-primary;
+        font-size: 2.25rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-family: $ff-body;
+    }
+
+    &__sub {
+        text-align: center;
+        font-family: $ff-display;
+        font-size: 1.05rem;
+        color: rgba(13, 96, 111, 0.7);
+        margin-bottom: 3rem;
+    }
+
+    @include respond-to(mobile) {
+        padding: 3rem 0 4rem;
+        &__title {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+// Accordion
+.faq-list {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.faq-item {
+    border: 2px solid rgba(13, 96, 111, 0.18);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    transition:
+        border-color $ease,
+        box-shadow $ease;
+    background: #fff;
+
+    &:hover {
+        border-color: rgba(13, 96, 111, 0.35);
+    }
+
+    &.open {
+        border-color: $clr-primary;
+        box-shadow: 0 4px 20px rgba(242, 120, 92, 0.12);
+    }
+
+    &__question {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 1.4rem 1.75rem;
+        text-align: left;
+        font-family: $ff-display;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: $clr-secondary;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        transition: color $ease;
+
+        .faq-item.open & {
+            color: $clr-primary;
+        }
+    }
+
+    &__icon {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+        color: $clr-primary;
+        transition: transform 0.35s ease;
+        line-height: 1;
+
+        .faq-item.open & {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+            max-height 0.4s ease,
+            padding 0.4s ease;
+        font-family: $ff-display;
+        font-size: 1.05rem;
+        color: $clr-secondary;
+        line-height: 1.75;
+        padding: 0 1.75rem;
+
+        .faq-item.open & {
+            max-height: 400px;
+            padding: 0 1.75rem 1.5rem;
+        }
+    }
+
+    @include respond-to(mobile) {
+        &__question {
+            font-size: 1rem;
+            padding: 1.1rem 1.25rem;
+        }
+
+        &.open &__answer {
+            padding: 0 1.25rem 1.25rem;
+        }
+    }
+}
+
+// Contact CTA
+.faq-contact {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(
+        135deg,
+        rgba(242, 120, 92, 0.08),
+        rgba(13, 96, 111, 0.08)
+    );
+    border-radius: calc(#{$radius-lg} * 2);
+    border: 1px solid rgba(242, 120, 92, 0.2);
+
+    &__title {
+        font-family: $ff-display;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: $clr-secondary;
+        margin-bottom: 0.75rem;
+    }
+
+    &__text {
+        font-family: $ff-display;
+        font-size: 1.05rem;
+        color: rgba(13, 96, 111, 0.75);
+        margin-bottom: 1.75rem;
+        line-height: 1.6;
+    }
+
+    &__btn {
+        font-size: 1.05rem;
+    }
+
+    @include respond-to(mobile) {
+        padding: 2rem 1.5rem;
+        &__title {
+            font-size: 1.4rem;
+        }
+    }
+}

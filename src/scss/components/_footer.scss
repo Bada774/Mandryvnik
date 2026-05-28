@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+.footer {
+  color: $clr-white;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    position: relative;
+    gap: 1rem;
+  }
+
+  &__copyright {
+    font-family: $ff-body;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  position: absolute;
+  right: 1.5rem;
+
+  &__link {
+    color: $clr-white;
+    transition: opacity $ease;
+    &:hover { opacity: 0.7; }
+  }
+
+  &__icon { font-size: 1.75rem; }
+
+  // Responsive
+  @include respond-to(mobile) {
+    position: static;
+  }
+}
+
+@include respond-to(mobile) {
+  .footer .wrapper {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,31 @@
+// Colors
+$clr-primary: #f2785c;
+$clr-primary-dark: #d9603f;
+$clr-secondary: #0d606f;
+$clr-secondary-dk: #0a4f5c;
+$clr-secondary-40: rgba(13, 96, 111, 0.4);
+$clr-secondary-80: rgba(13, 96, 111, 0.8);
+$clr-white: #ffffff;
+$clr-overlay: rgba(0, 0, 0, 0.25);
+
+// Typography
+$ff-display: "Aleo", serif;
+$ff-brand: "Magra", sans-serif;
+$ff-body: "Red Hat Text", sans-serif;
+
+// Layout
+$nav-h: 90px;
+$wrapper-w: 1200px;
+
+// Border radius
+$radius-sm: 8px;
+$radius-md: 10px;
+$radius-lg: 1rem;
+
+// Transition
+$ease: 0.3s ease;
+
+// Breakpoints
+$bp-tablet: 1024px;
+$bp-mobile: 768px;
+$bp-small: 480px;

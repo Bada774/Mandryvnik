@@ -1,0 +1,82 @@
+<div class="overlay" id="overlay"></div>
+
+<div
+    class="modal"
+    id="modalSignup"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="signupTitle"
+>
+    <button class="modal__close" aria-label="Закрити">&times;</button>
+    <h2 class="modal__title" id="signupTitle">Створити акаунт</h2>
+    <form class="modal__form" action="" novalidate>
+        <label class="modal__label" for="signupEmail">E-mail</label>
+        <input
+            class="modal__input"
+            id="signupEmail"
+            type="email"
+            autocomplete="email"
+        />
+        <label class="modal__label" for="signupPassword">Пароль</label>
+        <input
+            class="modal__input"
+            id="signupPassword"
+            type="password"
+            autocomplete="new-password"
+        />
+        <button class="btn modal__btn" type="button">Зареєструватися</button>
+    </form>
+    <p class="modal__footer-text">
+        Вже є акаунт?
+        <a href="#" class="js-open-login">Увійдіть</a>
+    </p>
+</div>
+
+<div
+    class="modal"
+    id="modalLogin"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="loginTitle"
+>
+    <button class="modal__close" aria-label="Закрити">&times;</button>
+    <h2 class="modal__title" id="loginTitle">Увійти в акаунт</h2>
+    <div class="modal-login__socials">
+        <button
+            class="modal-login__social-btn modal-login__facebook"
+            type="button"
+        >
+            <img src="/assets/img/facebook.svg" alt="" aria-hidden="true" />
+            Увійти із Facebook
+        </button>
+        <button
+            class="modal-login__social-btn modal-login__google"
+            type="button"
+        >
+            <img src="/assets/img/google.svg" alt="" aria-hidden="true" />
+            Увійти із Google
+        </button>
+    </div>
+    <p class="modal__divider">або</p>
+    <form class="modal__form" action="" novalidate>
+        <label class="modal__label" for="loginEmail">E-mail</label>
+        <input
+            class="modal__input"
+            id="loginEmail"
+            type="email"
+            autocomplete="email"
+        />
+        <label class="modal__label" for="loginPassword">Пароль</label>
+        <input
+            class="modal__input"
+            id="loginPassword"
+            type="password"
+            autocomplete="current-password"
+        />
+        <button class="btn modal__btn" type="button">Увійти</button>
+    </form>
+    <p class="modal__footer-text">
+        Немає акаунта?
+        <a href="#" class="js-open-signup">Зареєструйтеся</a>
+    </p>
+</div>

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Мандрівник — Досліджуй красу Всесвіту</title>
+        <!-- Styles: linked directly so they are render-blocking — no flash -->
+        <link rel="stylesheet" href="/scss/main.scss" />
+        <!-- Fonts: preconnect + parallel fetch, swap prevents invisible text -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Magra:wght@700&family=Red+Hat+Text:wght@400;500&display=swap"
+        />
+        <script
+            defer
+            src="https://kit.fontawesome.com/deba429617.js"
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="/js/pages/index.js"></script>
+    </head>
+    <body>
+        {{> header}}
+
+        <main>
+            <!--  HERO  -->
+            <section class="section-main" id="plan">
+                <div class="wrapper">
+                    <h1 class="section-main__title">
+                        Досліджуй красу<br />Всесвіту
+                    </h1>
+                    <h3 class="section-main__info">
+                        Отримуйте персональні рекомендації щодо країн, готелів,
+                        подорожей тощо
+                    </h3>
+                    <form class="section-main__form" action="">
+                        <input
+                            class="section-main__input"
+                            type="text"
+                            placeholder="Чого Ви бажали б?"
+                            aria-label="Пошук подорожей"
+                        />
+                        <button
+                            class="section-main__button btn js-open-signup"
+                            type="button"
+                        >
+                            Почніть подорож
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!--  HOW WE WORK  -->
+            <section class="section-steps" id="how-we-work">
+                <div class="wrapper">
+                    <h2 class="section-steps__title">
+                        Три кроки до неперевершеної подорожі
+                    </h2>
+                    <ul class="section-steps__list">
+                        <li class="section-steps__item">
+                            <img
+                                class="section-steps__img"
+                                src="/assets/img/bike.svg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                            <p class="section-steps__text">
+                                Розповідайте нам, чого бажаєте
+                            </p>
+                        </li>
+                        <li class="section-steps__item">
+                            <img
+                                class="section-steps__img"
+                                src="/assets/img/calendar.svg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                            <p class="section-steps__text">
+                                Визначте зручні дати
+                            </p>
+                        </li>
+                        <li class="section-steps__item">
+                            <img
+                                class="section-steps__img"
+                                src="/assets/img/flight.svg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                            <p class="section-steps__text">
+                                Отримайте наші рекомендації
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!--  DESTINATIONS SLIDER  -->
+            <section class="section-destinations" id="destinations">
+                <h2 class="section-destinations__title">Популярні подорожі</h2>
+
+                <div class="section-destinations__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="section-destinations__slide swiper-slide">
+                            <img
+                                class="section-destinations__img"
+                                src="/assets/img/spain.png"
+                                alt="Іспанія"
+                            />
+                            <p class="section-destinations__text">Іспанія</p>
+                        </div>
+                        <div class="section-destinations__slide swiper-slide">
+                            <img
+                                class="section-destinations__img"
+                                src="/assets/img/japan.png"
+                                alt="Японія"
+                            />
+                            <p class="section-destinations__text">Японія</p>
+                        </div>
+                        <div class="section-destinations__slide swiper-slide">
+                            <img
+                                class="section-destinations__img"
+                                src="/assets/img/usa.png"
+                                alt="США"
+                            />
+                            <p class="section-destinations__text">США</p>
+                        </div>
+                        <div class="section-destinations__slide swiper-slide">
+                            <img
+                                class="section-destinations__img"
+                                src="/assets/img/japan.png"
+                                alt="Японія"
+                            />
+                            <p class="section-destinations__text">Японія</p>
+                        </div>
+                        <div class="section-destinations__slide swiper-slide">
+                            <img
+                                class="section-destinations__img"
+                                src="/assets/img/spain.png"
+                                alt="Іспанія"
+                            />
+                            <p class="section-destinations__text">Іспанія</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-destinations__nav">
+                    <button
+                        class="swiper-btn-prev"
+                        aria-label="Попередній слайд"
+                    >
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="swiper-pagination"></div>
+                    <button
+                        class="swiper-btn-next"
+                        aria-label="Наступний слайд"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <button class="section-destinations__btn btn">
+                    <span>&rarr;</span>Знайти більше
+                </button>
+            </section>
+
+            <!--  STORIES + FOOTER WRAPPER  -->
+            <div class="stories-footer__wrapper" id="stories">
+                <section class="section-stories">
+                    <div class="wrapper">
+                        <h2 class="section-stories__title">
+                            Історії подорожей
+                        </h2>
+                        <ul class="section-stories__list">
+                            <li class="section-stories__item hidden">
+                                <img
+                                    class="section-stories__img"
+                                    src="/assets/img/story1.png"
+                                    alt="Подорож до Тайланду"
+                                />
+                                <div class="section-stories__info">
+                                    <h4 class="section-stories__header">
+                                        10 фото Тайланду
+                                    </h4>
+                                    <p class="section-stories__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Sit, eligendi dolorem?
+                                        Provident incidunt error ipsum odio
+                                        eveniet, deserunt, tenetur molestias
+                                        possimus amet esse maxime obcaecati
+                                        saepe ducimus corporis inventore.
+                                        Aliquam mollitia architecto non vitae
+                                        quam aspernatur quasi nostrum magni
+                                        unde?
+                                    </p>
+                                    <a
+                                        class="section-stories__readmore"
+                                        href="#"
+                                        >Взнати більше</a
+                                    >
+                                </div>
+                            </li>
+
+                            <li class="section-stories__item hidden">
+                                <img
+                                    class="section-stories__img"
+                                    src="/assets/img/story2.png"
+                                    alt="Національний парк, Юта"
+                                />
+                                <div class="section-stories__info">
+                                    <h4 class="section-stories__header">
+                                        Національний парк, Юта
+                                    </h4>
+                                    <p class="section-stories__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Provident incidunt
+                                        error ipsum odio eveniet, deserunt,
+                                        tenetur molestias possimus amet esse
+                                        maxime obcaecati saepe ducimus corporis
+                                        inventore. Aliquam mollitia architecto
+                                        non vitae quam.
+                                    </p>
+                                    <a
+                                        class="section-stories__readmore"
+                                        href="#"
+                                        >Взнати більше</a
+                                    >
+                                </div>
+                            </li>
+
+                            <li class="section-stories__item hidden">
+                                <img
+                                    class="section-stories__img"
+                                    src="/assets/img/story3.png"
+                                    alt="Подорож у гори"
+                                />
+                                <div class="section-stories__info">
+                                    <h4 class="section-stories__header">
+                                        Моє серце залишилось в горах
+                                    </h4>
+                                    <p class="section-stories__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Sit, eligendi dolorem?
+                                        Provident incidunt error ipsum odio
+                                        eveniet, deserunt, tenetur molestias
+                                        possimus amet esse maxime obcaecati
+                                        saepe ducimus corporis inventore.
+                                        Aliquam mollitia architecto.
+                                    </p>
+                                    <a
+                                        class="section-stories__readmore"
+                                        href="#"
+                                        >Взнати більше</a
+                                    >
+                                </div>
+                            </li>
+
+                            <li class="section-stories__item hidden">
+                                <img
+                                    class="section-stories__img"
+                                    src="/assets/img/story4.png"
+                                    alt="Найдовша подорож"
+                                />
+                                <div class="section-stories__info">
+                                    <h4 class="section-stories__header">
+                                        Найдовша подорож у моєму житті
+                                    </h4>
+                                    <p class="section-stories__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Sit, eligendi dolorem?
+                                        Provident incidunt error ipsum odio
+                                        eveniet, deserunt, tenetur molestias
+                                        possimus amet esse maxime obcaecati
+                                        saepe ducimus corporis inventore.
+                                    </p>
+                                    <a
+                                        class="section-stories__readmore"
+                                        href="#"
+                                        >Взнати більше</a
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                        <a
+                            class="section-stories__btn btn"
+                            href="/pages/blog.html"
+                        >
+                            <span>→</span>Побачити більше
+                        </a>
+                    </div>
+                </section>
+
+                {{> footer}}
+            </div>
+            <!-- /.stories-footer__wrapper -->
+        </main>
+
+        {{> modals}}
+    </body>
+</html>

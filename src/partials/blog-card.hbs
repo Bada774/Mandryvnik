@@ -1,0 +1,27 @@
+<article class="blog-card" data-category="{{category}}">
+    <a class="blog-card__img-wrap" href="#">
+        <img class="blog-card__img" src="{{img}}" alt="{{title}}" />
+        <span class="blog-card__tag">{{tag}}</span>
+    </a>
+    <div class="blog-card__body">
+        <div class="blog-card__meta">
+            <span class="blog-card__date">
+                <i class="fa-regular fa-calendar"></i>
+                {{date}}
+            </span>
+            <span class="blog-card__read">
+                <i class="fa-regular fa-clock"></i>
+                {{read}}
+                хв читання
+            </span>
+        </div>
+        <h3 class="blog-card__title">
+            <a href="#">{{title}}</a>
+        </h3>
+        <p class="blog-card__excerpt">{{excerpt}}</p>
+        <a class="blog-card__link" href="#">
+            Читати далі
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
